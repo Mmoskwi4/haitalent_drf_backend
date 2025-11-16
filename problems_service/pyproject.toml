@@ -1,0 +1,45 @@
+[project]
+name = "haitalent-drf-backend"
+version = "0.1.0"
+description = "haitalent_drf_backend API-service for questions and answers"
+authors = [
+    {name = "Mmoskwi4", email = "germandemin2211@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=5.2.8,<6.0.0",
+    "djangorestframework>=3.16.1,<4.0.0",
+    "python-dotenv>=1.2.1,<2.0.0",
+    "psycopg2-binary>=2.9.11,<3.0.0",
+    "drf-spectacular>=0.29.0,<0.30.0",
+    "django-cors-headers>=4.9.0,<5.0.0",
+    "pytest-django>=4.8.0,<5.0.0",
+    "pytest-factoryboy>=2.5.0,<3.0.0",
+    "factory-boy>=3.3.0,<4.0.0",
+    "mypy>=1.10.0,<2.0.0",
+    "django-stubs>=4.2.0,<5.0.0",
+    "djangorestframework-stubs>=3.14.0,<4.0.0",
+    "types-psycopg2>=2.9.21,<3.0.0",
+    "coverage>=7.6.0,<8.0.0",
+    "pytest (>=9.0.1,<10.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.test.dependencies]
+pytest-django = "^4.11.1"
+
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+disallow_any_generics = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+plugins = [
+    "mypy_django_plugin.main",
+]
